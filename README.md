@@ -110,5 +110,5 @@ api_tests.md – API test scenarios
 Marco Lo Bianco – QA Engineer
 LinkedIn
 
-🔗 Live Repository
+[🔗]([url](https://github.com/marcolob/cypress-igaming-demo)) Live Repository
 GitHub - Cypress iGaming Demo
