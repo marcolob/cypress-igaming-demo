@@ -3,6 +3,8 @@ Cypress iGaming Demo
 QA Automation Demo for iGaming Platforms – Casino & Gaming Web Applications.
 Demonstrates end-to-end, API, and automation testing with Cypress and Playwright, following best QA practices.
 
+---
+
 🚀 Overview
 
 This project showcases automation and testing capabilities for gaming platforms. It simulates player journeys, validates APIs, and demonstrates integration with CI/CD workflows. Ideal for demonstrating QA skills for positions in Gaming Experience teams.
@@ -11,76 +13,87 @@ Key Features:
 
 End-to-end tests with Cypress
 
-API testing with Cypress
+API testing with Cypress & Postman
 
-Mock API integration for Sessions, Accounts, and Core modules
+Basic automation with Playwright
+
+BDD-style test scenarios (Cucumber optional)
 
 CI/CD integration example with GitHub Actions
 
+14 tests implemented across SessionsAPI, AccountsAPI, and CoreAPI
+
+---
+
 🧰 Tech Stack
 
-Cypress – End-to-end and API testing
+Cypress – End-to-end testing
 
-Playwright – Browser automation (optional)
+Playwright – Browser automation
 
 JavaScript / TypeScript
 
-BDD – Optional structured test scenarios
+BDD – Cucumber for structured test scenarios
+
+Postman – API testing
 
 GitHub Actions / Jenkins – CI/CD pipelines
 
+---
+
 📂 Project Structure
+
 cypress-igaming-demo/
 ├─ cypress/
-│  ├─ e2e/
-│  │  ├─ SessionsAPI/     → 4 test
-│  │  ├─ AccountsAPI/     → 4 test
-│  │  └─ CoreAPI/         → 6 test
-│  ├─ fixtures/           → test data
-│  ├─ support/            → commands/helpers
-├─ package.json
-├─ cypress.config.js
-├─ README.md
-├─ docs/                 → Optional manual test plans
+│ ├─ e2e/ # End-to-end test scripts
+│ │ ├─ SessionsAPI/ → 4 tests: login, logout, service ticket, session flow
+│ │ ├─ AccountsAPI/ → 4 tests: account info, flags, payments, plus card
+│ │ └─ CoreAPI/ → 6 tests: balance, bonus, games, jackpot, promo, tickets
+│ ├─ fixtures/ # Test data
+│ ├─ support/ # Commands and helpers
+├─ package.json # Project dependencies
+├─ README.md # Project documentation
+├─ cypress.config.js # Cypress configuration
+├─ docs/ # Optional: manual test plans, checklists
+
+---
 
 ⚡ Highlights
 Automated Testing
 
-Player journey simulations: login → check session → logout
+Player journey simulations: login, lobby navigation, balance checks
 
-Account validation: account info, flags, payments, plus card
+Form validations and UI interactions
 
-Core API verification: balance, bonus, games, jackpot, promo, tickets
-
-Reusable Cypress commands across modules
+Reusable Cypress commands
 
 API Testing
 
-GET, POST, and DELETE endpoints
+GET, POST, and DELETE endpoints validation
 
 Response schema and status code assertions
 
-Tests fully based on Mock API collections
-
-14 tests currently implemented:
-
-SessionsAPI (4): login, logout, service ticket check, integrated session flow
-
-AccountsAPI (4): account info, account flags, payments, plus card
-
-CoreAPI (6): balance, bonus, games, jackpot, promo, tickets
+Fully based on Mock API collections
 
 CI/CD Integration
 
-GitHub Actions workflow runs tests automatically on push
+GitHub Actions workflow for running tests on push
 
-Headless test execution for pipelines
+Headless test execution for automated pipelines
+
+BDD & Playwright
+
+Example BDD scenario using Cucumber
+
+Playwright automation scripts for browser testing
 
 Reporting
 
 Screenshots of test results (cypress/screenshots/)
 
 HTML/JSON reports for CI/CD (cypress/reports/)
+
+---
 
 💻 Getting Started
 # Clone the repository
@@ -96,11 +109,21 @@ npx cypress open
 # Or run headless tests
 npx cypress run
 
-# Optional: Run Playwright tests (if included)
+# Run Playwright tests (if included)
 npx playwright test
 
-📑 Documentation
+----
 
+📈 Example Tests
+E2E Player Flow: login → play → check balance → logout
+
+API Validation: endpoint response validation, status codes
+
+BDD Scenario: feature: “Player can make a deposit”
+
+---
+
+📑 Documentation
 Optional documentation can be found in the docs/ folder:
 
 manual_tests.md – Manual test cases
@@ -109,8 +132,9 @@ checklists.md – QA checklists
 
 api_tests.md – API test scenarios
 
-👤 Author
+---
 
+👤 Author
 Marco Lo Bianco – QA Engineer
 LinkedIn: https://www.linkedin.com/in/marco-lo-bianco-869311b1/
-🔗 Live Repository
+[🔗]([url](https://github.com/marcolob/cypress-igaming-demo)) Live Repository
