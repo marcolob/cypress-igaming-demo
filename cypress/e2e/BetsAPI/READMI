@@ -1,0 +1,137 @@
+# BetsAPI Tests - Cypress
+
+## English Version
+
+This folder contains Cypress tests for the **BetsAPI**, using mocked APIs through Mockoon.
+
+### Test Structure
+
+- **betSingle.cy.js**  
+  Tests `POST /bet/single` with three scenarios:
+  1. **Success (200)** → checks properties `id`, `numLines`, `number`, `placedDateTime`, `receipt`, `totalStake`.
+  2. **Delayed (202)** → checks `delayPeriodSeconds`, `delayedBetId`, `id`, `number`.
+  3. **Error (400)** → verifies the `errors` array structure and properties `code`, `field`, `message`, `solution`.
+
+- **betslips.cy.js**  
+  Tests `POST /betslips`, verifying betslip structure organized by betting opportunities (`legs`, `parts`, `freeBets`, `minStake`, `maxStake`).
+
+- **freebets.cy.js**  
+  Tests `GET /freebets`:
+  1. Available free bets (200)  
+  2. No free bets (204)
+
+- **history.cy.js & historyError.cy.js**  
+  Tests `GET /history`:
+  1. Success (200) → checks properties of each bet (`stake`, `winnings`, `legs`, etc.)  
+  2. Error (404) → verifies `errors` array structure (`code`, `field`, `message`, `solution`).
+
+- **cashin.cy.js**  
+  Tests `PUT /:betId/cashin` with three scenarios:
+  1. Success (200) → property `success` boolean  
+  2. Valid error (400)  
+  3. Conflict error (409)
+
+- **games.cy.js**  
+  Tests game endpoints:
+  1. `GET /games`  
+  2. `GET /casino`  
+  3. `GET /slots`  
+  Each test checks status 200, non-empty array, and first element properties `id` and `name`.
+
+- **jackpot.spec.cy.js**  
+  Tests `GET /sessions/jackpots` verifying a non-empty array and properties `id`, `name`, `amount`.
+
+### Methodology
+
+- **Mocking API:** all endpoints are mocked via Mockoon.  
+- **Status codes checked:** each test validates HTTP method and response code (200, 202, 204, 400, 404, 409).  
+- **JSON body:** key properties are always verified.  
+- **Centralized base URL:** for easy maintenance.  
+- **Logs for debugging:** each test logs useful information (e.g., number of items loaded).  
+- **PowerShell:** tests can be run with a single command:
+
+```powershell
+npx cypress run
+Notes
+Tests follow Mockoon simulation logic.
+
+To simulate errors like 404 or 409, Mockoon responses can be set as default or via rules.
+
+Structure allows easy extension for new endpoints or edge cases.
+
+-------------------------------------------------------------------------------------------------------------------
+
+Versione Italiana
+Questa cartella contiene i test Cypress per la BetsAPI, basati esclusivamente su API mockate tramite Mockoon.
+
+Struttura dei test
+betSingle.cy.js
+Testa POST /bet/single con tre scenari:
+
+Successo (200) → verifica proprietà id, numLines, number, placedDateTime, receipt, totalStake.
+
+Delayed (202) → verifica proprietà delayPeriodSeconds, delayedBetId, id, number.
+
+Errore (400) → verifica struttura dell’array errors e proprietà code, field, message, solution.
+
+betslips.cy.js
+Testa POST /betslips verificando la struttura del betslip organizzata per opportunità di scommessa (legs, parts, freeBets, minStake, maxStake).
+
+freebets.cy.js
+Testa GET /freebets:
+
+Free bets disponibili (200)
+
+Nessun free bet (204)
+
+history.cy.js & historyError.cy.js
+Testano GET /history:
+
+Successo (200) → verifica proprietà di ciascun bet (stake, winnings, legs, ecc.)
+
+Errore (404) → verifica struttura dell’array errors con code, field, message, solution.
+
+cashin.cy.js
+Testa PUT /:betId/cashin con tre scenari:
+
+Successo (200) → proprietà boolean success
+
+Errore valido (400)
+
+Errore di conflitto (409)
+
+games.cy.js
+Testa gli endpoint dei giochi:
+
+GET /games
+
+GET /casino
+
+GET /slots
+Verifica status 200, array non vuoto e proprietà id e name del primo elemento.
+
+jackpot.spec.cy.js
+Testa GET /sessions/jackpots verificando array non vuoto e proprietà id, name, amount.
+
+Metodologia
+Mocking API: tutti gli endpoint sono simulati tramite Mockoon.
+
+Status code controllati: ogni test verifica metodo HTTP e codice di risposta (200, 202, 204, 400, 404, 409).
+
+Body JSON: le proprietà chiave vengono sempre verificate.
+
+Base URL centralizzato: facilita manutenzione e riutilizzo.
+
+Log per debug: ogni test logga informazioni utili (es. numero di elementi caricati).
+
+PowerShell: tutti i test possono essere eseguiti con un unico comando:
+
+powershell
+Copia codice
+npx cypress run
+Nota
+I test seguono la logica di simulazione Mockoon.
+
+Per simulare errori come 404 o 409, le response di Mockoon possono essere impostate come default o tramite rules.
+
+La struttura permette di estendere facilmente i test a nuovi endpoint o scenari edge-case.

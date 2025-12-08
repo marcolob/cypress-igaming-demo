@@ -1,0 +1,4 @@
+git add .
+git commit -m "Nuovo messaggio di commit"
+git pull origin main --rebase
+git push -u origin main
