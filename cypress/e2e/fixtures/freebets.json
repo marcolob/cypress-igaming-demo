@@ -1,0 +1,32 @@
+{
+  "bets": [
+    {
+      "cashinValue": 0.9159765483984231,
+      "estimatedReturns": 0.8989224987254212,
+      "freeBetValue": 0.38795914228765316,
+      "id": "",
+      "legs": [
+        {
+          "number": 98789,
+          "parts": [
+            {
+              "eachWayDen": 60401,
+              "eachWayNum": 72020,
+              "eachWayPlaces": 34288,
+              "handicap": 0.4272714200369716,
+              "number": 34430,
+              "priceDen": 17266,
+              "priceFormatted": { "decimal": 0.1637200366653595 },
+              "priceNum": 6991
+            }
+          ]
+        }
+      ],
+      "numLines": 71737,
+      "numSelections": 8765,
+      "stake": 0.5349117170334052,
+      "stakePerLine": 0.7862545385986581,
+      "winnings": 0.30672808191602596
+    }
+  ]
+}
