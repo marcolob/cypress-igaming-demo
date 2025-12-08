@@ -39,6 +39,10 @@ Postman – API testing
 
 GitHub Actions / Jenkins – CI/CD pipelines
 
+Mockoon – API mock server for simulating responses
+
+ -Example mocks used: WHAPI Com Bets link [HERE]([url](https://mockoon.com/mock-samples/whapicom-bets/))
+
 ---
 
 📂 Project Structure
