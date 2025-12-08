@@ -99,17 +99,17 @@ Automated pipelines
 ---
 
 💻 GETTING STARTED
-# Clone the repository
+ Clone the repository
 git clone https://github.com/marcolob/cypress-igaming-demo.git
 cd cypress-igaming-demo
 
-# Install dependencies
+ Install dependencies
 npm install
 
-# Open Cypress Test Runner
+ Open Cypress Test Runner
 npx cypress open
 
-# Run headless tests
+ Run headless tests
 npx cypress run
 
 📈 EXAMPLE TESTS
