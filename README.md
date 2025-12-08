@@ -112,6 +112,8 @@ npx cypress open
  Run headless tests
 npx cypress run
 
+---
+
 📈 EXAMPLE TESTS
 
 Login → browse → play → balance → logout
