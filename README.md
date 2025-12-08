@@ -1,13 +1,15 @@
-# Cypress iGaming Demo
+CYPRESS IGAMING DEMO
 
 QA Automation Demo for iGaming Platforms – Casino & Gaming Web Applications.
-Demonstrates end-to-end, API, and automation testing with Cypress and Playwright, following best QA practices.
+Demonstrates end-to-end, API, and automation testing with Cypress, following best QA practices.
 
 ---
 
-🚀 Overview
+🚀 OVERVIEW
 
-This project showcases automation and testing capabilities for gaming platforms. It simulates player journeys, validates APIs, and demonstrates integration with CI/CD workflows. Ideal for demonstrating QA skills for positions in Gaming Experience teams.
+This project showcases automation and testing capabilities for gaming platforms.
+It simulates player journeys, validates APIs, and demonstrates integration with CI/CD workflows.
+Ideal for demonstrating QA skills for positions in Gaming Experience or Sportsbook teams.
 
 Key Features:
 
@@ -15,17 +17,17 @@ End-to-end tests with Cypress
 
 API testing with Cypress & Postman
 
-Basic automation with Playwright
-
 BDD-style test scenarios (Cucumber optional)
 
 CI/CD integration example with GitHub Actions
 
-14 tests implemented across SessionsAPI, AccountsAPI, and CoreAPI
+18+ automated tests (SessionsAPI, AccountsAPI, CoreAPI, BetsAPI, SportDataAPI)
+
+Fully based on Mock API collections (Mockoon)
 
 ---
 
-🧰 Tech Stack
+🧰 TECH STACK
 
 Cypress – End-to-end testing
 
@@ -33,57 +35,70 @@ JavaScript
 
 Postman – API testing
 
-GitHub Actions / – CI/CD pipelines
+Mockoon – API mock server
 
-Mockoon – API mock server for simulating responses
+Example mocks used:
 
- -Example mocks used: WHAPI Com Bets (https://mockoon.com/mock-samples/whapicom-bets/)
+WHAPI Com Bets → https://mockoon.com/mock-samples/whapicom-bets/
+
+WHAPI SportsData → https://raw.githubusercontent.com/mockoon/mock-samples/main/mock-apis/data/whapicom-sportsdata.json
+
+GitHub Actions – CI/CD pipelines
+
+Playwright – Optional automation
 
 ---
 
-📂 Project Structure
-
+📂 PROJECT STRUCTURE
 cypress-igaming-demo/
 ├─ cypress/
-│ ├─ e2e/ # End-to-end test scripts
-│ │ ├─ SessionsAPI/ → 4 tests: login, logout, service ticket, session flow
-│ │ ├─ AccountsAPI/ → 4 tests: account info, flags, payments, plus card
-│ │ └─ CoreAPI/ → 6 tests: balance, bonus, games, jackpot, promo, tickets
-│ ├─ fixtures/ # Test data
-│ ├─ support/ # Commands and helpers
-├─ package.json # Project dependencies
-├─ README.md # Project documentation
-├─ cypress.config.js # Cypress configuration
-├─ docs/ # Optional: manual test plans, checklists
+│  ├─ e2e/
+│  │  ├─ SessionsAPI/     → 4 tests
+│  │  ├─ AccountsAPI/     → 4 tests
+│  │  ├─ CoreAPI/         → 6 tests
+│  │  ├─ BetsAPI/         → 2 tests
+│  │  └─ SportDataAPI/    → NEW: competitions, seasons, events
+│  ├─ fixtures/
+│  ├─ support/
+├─ package.json
+├─ README.md
+├─ cypress.config.js
+└─ docs/
 
 ---
 
-⚡ Highlights
+⚡ HIGHLIGHTS
 Automated Testing
 
-Player journey simulations: login, lobby navigation, balance checks
+Player journey simulations
 
-Form validations and UI interactions
+UI interactions, balance checks, game flow
 
 Reusable Cypress commands
 
+Parametric tests
+
 API Testing
 
-GET, POST, and DELETE endpoints validation
+Status codes & schema validation
 
-Response schema and status code assertions
+Negative testing (400, 404, 409)
 
-Fully based on Mock API collections
+Fully aligned to Mockoon responses
+
+Includes SportDataAPI: competitions → seasons → events
 
 CI/CD Integration
 
-GitHub Actions workflow for running tests on push
+GitHub Actions workflow
 
-Headless test execution for automated pipelines
+Headless test execution
+
+Automated pipelines
 
 ---
 
-💻 Getting Started
+💻 GETTING STARTED
 # Clone the repository
 git clone https://github.com/marcolob/cypress-igaming-demo.git
 cd cypress-igaming-demo
@@ -91,33 +106,40 @@ cd cypress-igaming-demo
 # Install dependencies
 npm install
 
-# Open Cypress Test Runner (GUI)
+# Open Cypress Test Runner
 npx cypress open
 
-# Or run headless tests
+# Run headless tests
 npx cypress run
 
-----
+📈 EXAMPLE TESTS
 
-📈 Example Tests
-E2E Player Flow: login → play → check balance → logout
+Login → browse → play → balance → logout
 
-API Validation: endpoint response validation, status codes
+Validate session ticket
 
-BDD Scenario: feature: “Player can make a deposit”
+Retrieve competitions, seasons, events
 
----
+Validate schema, error handling, status codes
 
-📑 Documentation
-Optional documentation can be found in the docs/ folder:
-
-manual_tests.md – Manual test cases
-
-checklists.md – QA checklists
-
-api_tests.md – API test scenarios
+BDD examples (optional)
 
 ---
 
-👤 Author
+📑 DOCUMENTATION
+
+Inside the docs/ folder:
+
+manual_tests.md
+
+checklists.md
+
+api_tests.md
+
+---
+
+👤 AUTHOR
+
 Marco Lo Bianco – QA Engineer
+
+Automation | iGaming | API | CI/CD
