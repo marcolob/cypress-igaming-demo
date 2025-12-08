@@ -136,5 +136,3 @@ api_tests.md – API test scenarios
 
 👤 Author
 Marco Lo Bianco – QA Engineer
-LinkedIn: https://www.linkedin.com/in/marco-lo-bianco-869311b1/
-[🔗]([url](https://github.com/marcolob/cypress-igaming-demo)) Live Repository
