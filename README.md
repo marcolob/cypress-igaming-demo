@@ -41,7 +41,7 @@ GitHub Actions / Jenkins – CI/CD pipelines
 
 Mockoon – API mock server for simulating responses
 
- -Example mocks used: WHAPI Com Bets link [HERE]([url](https://mockoon.com/mock-samples/whapicom-bets/))
+ -Example mocks used: WHAPI Com Bets (https://mockoon.com/mock-samples/whapicom-bets/)
 
 ---
 
