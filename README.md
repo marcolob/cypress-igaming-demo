@@ -1,4 +1,4 @@
-Cypress iGaming Demo
+#Cypress iGaming Demo
 
 QA Automation Demo for iGaming Platforms – Casino & Gaming Web Applications.
 Demonstrates end-to-end, API, and automation testing with Cypress and Playwright, following best QA practices.
