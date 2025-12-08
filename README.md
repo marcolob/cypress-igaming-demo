@@ -29,15 +29,11 @@ CI/CD integration example with GitHub Actions
 
 Cypress – End-to-end testing
 
-Playwright – Browser automation
-
-JavaScript / TypeScript
-
-BDD – Cucumber for structured test scenarios
+JavaScript
 
 Postman – API testing
 
-GitHub Actions / Jenkins – CI/CD pipelines
+GitHub Actions / – CI/CD pipelines
 
 Mockoon – API mock server for simulating responses
 
@@ -85,18 +81,6 @@ GitHub Actions workflow for running tests on push
 
 Headless test execution for automated pipelines
 
-BDD & Playwright
-
-Example BDD scenario using Cucumber
-
-Playwright automation scripts for browser testing
-
-Reporting
-
-Screenshots of test results (cypress/screenshots/)
-
-HTML/JSON reports for CI/CD (cypress/reports/)
-
 ---
 
 💻 Getting Started
@@ -112,9 +96,6 @@ npx cypress open
 
 # Or run headless tests
 npx cypress run
-
-# Run Playwright tests (if included)
-npx playwright test
 
 ----
 
