@@ -55,7 +55,7 @@ cypress-igaming-demo/
 │  ├─ e2e/
 │  │  ├─ SessionsAPI/     → 4 tests
 │  │  ├─ AccountsAPI/     → 4 tests
-│  │  ├─ CoreAPI/         → 6 tests
+│  │  ├─ CoreAPI/         → 9 tests
 │  │  ├─ BetsAPI/         → 2 tests
 │  │  └─ SportDataAPI/    → NEW: competitions, seasons, events
 │  ├─ fixtures/
